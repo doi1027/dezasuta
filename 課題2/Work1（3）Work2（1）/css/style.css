@@ -11,15 +11,17 @@
     margin: 0 auto;
     align-items: center;
   }
-  
-  .main-contents {
-    width: 70%;
-    padding: 10px;
+
+  .title {
+    padding: 20px;
   }
-  
+    
+  .menu {
+    display: flex;
+  }
+
   .side-menu {
-    width: 20%;
-    padding: 10px;
+    padding: 20px;
     border-right:1px solid #333;
   }
 
@@ -31,10 +33,22 @@
 {
     .container {
         flex-direction: column;
-        padding: 0;
-        margin: 0;
         width: 100%;
-        border: none;
-        border-bottom: 1px solid #333;
+        align-items: flex-start;
+    }
+
+    .menu {
+      flex-direction: column;
+    }
+
+    .side-menu {
+      border: none;
+      border-bottom: 1px solid #333;
+      width: 350px;
+    }
+
+    .side-menu:last-child {
+      border-bottom: 1px solid #333;
+      width: 350px;
     }
 }
