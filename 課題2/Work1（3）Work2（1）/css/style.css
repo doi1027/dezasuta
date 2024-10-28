@@ -20,12 +20,12 @@
     display: flex;
   }
 
-  .side-menu {
+  li {
     padding: 20px;
     border-right:1px solid #333;
   }
 
-  .side-menu:last-child{
+  li:last-child{
     border: none;
 }
 
@@ -35,19 +35,20 @@
         flex-direction: column;
         width: 100%;
         align-items: flex-start;
+        gap: 0;
     }
 
     .menu {
       flex-direction: column;
     }
 
-    .side-menu {
+    li {
       border: none;
       border-bottom: 1px solid #333;
       width: 350px;
     }
 
-    .side-menu:last-child {
+    li:last-child {
       border-bottom: 1px solid #333;
       width: 350px;
     }
