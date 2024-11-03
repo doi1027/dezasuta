@@ -10,14 +10,19 @@
     <script>
         let flag = true;
         let num = 1;
+        let result = 0;
         while (flag) {
+            result = result + num;
             num = num + 1;
-            if (num > 20) {
+            if (num > 10) {
             flag = false;
+            }
+        }
+
+        if (result >= 20){
             console.log("20以上")
             } else {
                 console.log("20未満")
-            }
         }
     </script>
 </body>
