@@ -91,19 +91,18 @@ header {
 }
 
 main {
-  margin: 0auto;
+  margin: 0 auto;
 }
 
 .topics {
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
-  padding: 104px 0 93px 0;
+  padding: 104px 0 93px 10px;
 }
 
 .lead1 {
   font-size: 30px;
-  margin: 104 0 47 0;
 }
 
 .lead2 {
@@ -120,15 +119,20 @@ main {
   padding-top: 20px;
 }
 
-.about_us {
+.sp_br {
+  display: none;
+}
+
+#about_us {
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 10px;
 }
 
-.about_img {
+.pc_about_img {
   border-bottom-right-radius:82px;
 }
 
@@ -143,6 +147,10 @@ main {
   height: 77px;
 }
 
+.sp_about_img {
+  display: none;
+}
+
 .about_copy {
   font-size: 44px;
   line-height: 1.38;
@@ -155,9 +163,10 @@ main {
   padding-top: 23px;
 }
 
-.menu {
+#menu {
   max-width: 1000px;
   margin: 0 auto;
+  padding-left: 10px;
 }
 
 .menu_title {
@@ -171,20 +180,21 @@ main {
 .menu_container {
   display: flex;
   justify-content: space-between;
-  border-radius: 42px;
   max-width: 100%;
-}
-
-.menu_box1 {
-  padding-left: 5%;
+  text-align: left;
+  gap: 5%;
 }
 
 .menu_box2 {
   position: relative;
 }
 
-.menu_img {
+.pc_menu_img {
   border-top-right-radius: 41px;
+}
+
+.sp_menu_img {
+  display: none;
 }
 
 .menu_contents {
@@ -204,18 +214,23 @@ main {
 .gallery_title {
   display: flex;
   margin: 0 auto;
-  padding: 38px 0 17px;
+  padding: 80px 0 17px;
   justify-content: center;
   height: 77px;
 }
 
-.gallery_img {
+.pc_gallery_img {
   display: flex;
 }
 
-.event {
+.sp_gallery_img {
+  display: none;
+}
+
+#event {
   max-width: 1000px;
   margin: 0 auto;
+  padding-left: 10px;
 }
 
 .event_title {
@@ -224,23 +239,30 @@ main {
   padding: 60px 0 30px;
   justify-content: center;
   height: 77px;
+  gap: 10px;
 }
 
 .event_news {
   background-color: #fff;
   border:solid #4f260b;
-  height: 200px;
+}
+
+.event_news div {
+  width: fit-content;
+  margin: 41px auto;
 }
 
 .event_info {
-  max-width: 1000px;
-  margin: 0 auto;
   font-size: 23px;
-  justify-content: center;
+  line-height: 1.95;
+  justify-content: left;
+  display: flex;
+  margin-bottom: 22px;
 }
 
-span {
-  padding-left: 56px;
+.event_info span {
+  padding-left: 55px;
+  text-decoration: underline;
 }
 
 .access_title {
@@ -255,6 +277,7 @@ iframe {
   width: 100%;
   height: 471px;
   padding-top: 38px;
+  display: block;
 }
 
 footer {
@@ -268,6 +291,7 @@ footer {
   margin: 0 auto;
   justify-content: start;
   display: flex;
+  padding-left: 10px;
 }
 
 .footer_logo {
@@ -282,16 +306,18 @@ footer {
   align-items: center;
   padding: 82px 0 0 65px;
   font-size: 20px;
+  line-height: 1.95;
 }
 
 .address {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .footer_outer {
   text-align: center;
-  padding: 75px 0 75px;
+  padding: 55px 0 75px;
   font-size: 16px;
+  line-height: 2.18;
 }
 
 .pagetop {
@@ -299,4 +325,227 @@ footer {
   right: 20px;
   bottom: 20px;
   width: 125px;
+}
+
+/* スマホ版メニュー */
+
+.sp_nav,
+.sp_btn {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .header_logo {
+    width: 187px;
+  }
+  .pc_nav {
+      display: none;
+    }
+    .sp_btn{
+      display: block;
+      height: 23px;
+      cursor: pointer;
+      position: absolute;
+      top: 21px;
+      right: 25px;
+    }
+    .sp_btn span {
+      display: block;
+      width: 33px;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 2px;
+      position: relative;
+      top: 10px;
+      z-index: 2;
+      transition: 0.3s;
+    }
+    .sp_btn span::before,
+    .sp_btn span::after {
+      content: "";
+      display: block;
+      width: 33px;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 2px;
+      position: absolute;
+      transition: 0.3s;
+    }
+    .sp_btn span::before {
+      bottom: 10px;
+    }
+    .sp_btn span::after {
+      top: 10px;
+    }
+    .sp_btn.open span {
+      background: transparent;
+    }
+    .sp_btn.open span::before {
+      bottom: 0;
+      transform: rotate(45deg);
+    }
+    .sp_btn.open span::after {
+      top: 0;
+      transform: rotate(135deg);
+    }
+    .sp_nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 1;
+    }
+    .sp_nav ul{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      gap: 40px;
+    }
+    .sp_nav ul li {
+      color: #fff;
+      font-size: 18px;
+      font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    }
+    .topics {
+      padding: 41px 0 55px;
+    }
+    .lead1 {
+      font-size: 17px;
+    }
+    .lead2 {
+      font-size: 38px;
+      line-height: 1.15;
+      letter-spacing: 0.2em;
+      padding-top: 23px;
+    }
+    .lead3 {
+      font-size: 16px;
+      line-height: 1.87;
+      letter-spacing: 0.1em;
+      padding-top: 12px;
+      text-align: center;
+    }
+    .sp_br {
+      display: flex;
+    }
+    #about_us {
+      flex-direction: column;
+      align-items: center;
+    }
+    .right {
+      width: 100%;
+      padding-left: 0;
+    }
+    .about_us_title {
+      display: block;
+      height: 45px;
+      margin-bottom: 12px;
+    }
+    .pc_about_img {
+      display: none;
+    }
+    .sp_about_img {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      padding-top: 12px;
+    }
+    .about_copy {
+      font-size: 36px;
+      line-height: 1.25;
+      padding-top: 35px;
+    }
+    .about_text {
+      font-size: 16px;
+      line-height: 1.75;
+      padding-top: 20px;
+    }
+    .menu_title {
+       height: 45px;
+       padding: 41px 0 17px;
+    }
+    .menu_container {
+      flex-direction: column;
+      margin: 0 auto;
+      align-items: center;
+    }
+    .pc_menu_img {
+      display: none;
+    }
+    .sp_menu_img {
+      display: block;
+      width: 100%;
+      border-top-right-radius: 41px;
+      padding-top: 12px;
+    }
+    .menu_contents {
+      font-size: 40px;
+    }
+    .menu_text {
+      font-size: 17px;
+      line-height: 1.58;
+      padding-bottom: 56px;
+    }
+    .gallery_title {
+      height: 45px;
+      padding: 41px 0 17px;
+    }
+    .pc_gallery_img {
+      display: none;
+    }
+    .sp_gallery_img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .event_title {
+      height: 45px;
+      padding: 27px 0 16px;
+    }
+    .event_info {
+      display: block;
+    }
+    .event_info span {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      padding-left: 0px;
+    }
+    .access_title {
+      height: 45px;
+      padding: 26px 0 5px;
+    }
+    iframe {
+      height: 191px;
+    }
+    footer {
+      height: 322px;
+    }
+    .footer_wrap {
+      display: block;
+    }
+    .footer_logo {
+      padding-top: 41px;
+    }
+    .footer_contact {
+      text-align: left;
+      align-items: center;
+      padding: 28px 0 0;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+    .address {
+      margin-bottom: 10px;
+    }
+    .footer_outer {
+      padding: 40px 0 27px;
+    }
+    .pagetop {
+      width: 100px;
+    }
 }
