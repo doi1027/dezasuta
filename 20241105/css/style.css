@@ -283,7 +283,6 @@ iframe {
 footer {
   background-color: #fff;
   width: 100%;
-  height: 393px;
 }
 
 .footer_wrap {
@@ -411,6 +410,19 @@ footer {
       font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
         "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
     }
+    .lead2 {
+      font-size: 60px;
+    }
+    .lead3 {
+      font-size: 20px;
+    }
+    .about_copy {
+      font-size: 36px;
+      line-height: 1.25;
+      padding-top: 35px;
+    }
+}
+    @media screen and (max-width: 767px) {
     .topics {
       padding: 41px 0 55px;
     }
@@ -426,7 +438,6 @@ footer {
     .lead3 {
       font-size: 16px;
       line-height: 1.87;
-      letter-spacing: 0.1em;
       padding-top: 12px;
       text-align: center;
     }
@@ -436,15 +447,20 @@ footer {
     #about_us {
       flex-direction: column;
       align-items: center;
+      padding-left: 0;
     }
     .right {
       width: 100%;
       padding-left: 0;
     }
+    .about_us_title img {
+      height: 100%;
+    }
     .about_us_title {
       display: block;
       height: 45px;
-      margin-bottom: 12px;
+      width: 100%;
+      text-align: center;
     }
     .pc_about_img {
       display: none;
@@ -456,23 +472,27 @@ footer {
       padding-top: 12px;
     }
     .about_copy {
-      font-size: 36px;
-      line-height: 1.25;
-      padding-top: 35px;
+      padding-left: 20px;
     }
     .about_text {
       font-size: 16px;
       line-height: 1.75;
-      padding-top: 20px;
+      padding: 20px 20px 0 20px;
+    }
+    #menu {
+      padding: 0 37px 0 37px;
     }
     .menu_title {
        height: 45px;
-       padding: 41px 0 17px;
+       padding: 41px 0 0;
     }
     .menu_container {
       flex-direction: column;
       margin: 0 auto;
       align-items: center;
+    }
+    .menu_box2 {
+      width: 100%;
     }
     .pc_menu_img {
       display: none;
@@ -481,10 +501,11 @@ footer {
       display: block;
       width: 100%;
       border-top-right-radius: 41px;
-      padding-top: 12px;
+      padding-top: 17px;
     }
     .menu_contents {
       font-size: 40px;
+      top: 93%;
     }
     .menu_text {
       font-size: 17px;
@@ -503,18 +524,32 @@ footer {
       margin: 0 auto;
       width: 100%;
     }
+    .sp_gallery_img li img {
+      width: 100%;
+    }
+    #event {
+      padding: 0 20px 0 20px;
+    }
     .event_title {
       height: 45px;
       padding: 27px 0 16px;
     }
+    .event_news div {
+      width: auto;
+    }
     .event_info {
       display: block;
+      font-size: 16px;
+      line-height: 3.81;
+      padding: 0 15px 0 30px;
     }
-    .event_info span {
+    .event_info li {
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
-      padding-left: 0px;
+    }
+    .event_info span {
+      padding: 0 0 21px 0;
     }
     .access_title {
       height: 45px;
@@ -523,11 +558,9 @@ footer {
     iframe {
       height: 191px;
     }
-    footer {
-      height: 322px;
-    }
     .footer_wrap {
       display: block;
+      padding-left: 20px;
     }
     .footer_logo {
       padding-top: 41px;
@@ -539,11 +572,8 @@ footer {
       font-size: 18px;
       line-height: 1.72;
     }
-    .address {
-      margin-bottom: 10px;
-    }
     .footer_outer {
-      padding: 40px 0 27px;
+      padding: 20px 0 27px;
     }
     .pagetop {
       width: 100px;
