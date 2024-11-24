@@ -91,7 +91,7 @@
                     <li class="menu_box1">
                     <div class="menu_box2">
                         <img class="pc_menu_img" src="./images/pc_menu_food-100.jpg" alt="food">
-                        <img class="sp_menu_img" src="./images/pc_menu_food-100.jpg" alt="food">
+                        <img class="sp_menu_img" src="./images/food_sp@2x-100.jpg" alt="food">
                         <p class="menu_contents">Food</p>
                     </div>
                         <p class="menu_text">フードメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
@@ -174,7 +174,17 @@
                 $('.sp_btn').toggleClass('open');
                 $('.sp_nav').fadeToggle();
             })
-        })
+            $('a[href^="#"]').click(function () {
+                var href = $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top;
+                var speed = 500;
+            $("html, body").animate({
+                scrollTop: position
+            }, speed, "swing");
+            return false;
+            });
+    })
     </script>
 </body>
 

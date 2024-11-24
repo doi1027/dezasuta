@@ -129,7 +129,10 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 10px;
+}
+
+.left {
+  width: 50%;
 }
 
 .pc_about_img {
@@ -154,19 +157,19 @@ main {
 .about_copy {
   font-size: 44px;
   line-height: 1.38;
-  padding-top: 48px;
+  padding: 48px 10px 0 0;
 }
 
 .about_text {
   font-size: 16px;
   line-height: 1.62;
-  padding-top: 23px;
+  padding: 23px 10px 0 0;
 }
 
 #menu {
   max-width: 1000px;
   margin: 0 auto;
-  padding-left: 10px;
+  padding: 0 10px 0 10px;
 }
 
 .menu_title {
@@ -230,7 +233,7 @@ main {
 #event {
   max-width: 1000px;
   margin: 0 auto;
-  padding-left: 10px;
+  padding: 0 10px 0 10px;
 }
 
 .event_title {
@@ -424,7 +427,8 @@ footer {
 }
     @media screen and (max-width: 767px) {
     .topics {
-      padding: 41px 0 55px;
+      padding: 41px 0 47px;
+      width: 100%;
     }
     .lead1 {
       font-size: 17px;
@@ -432,12 +436,13 @@ footer {
     .lead2 {
       font-size: 38px;
       line-height: 1.15;
-      letter-spacing: 0.2em;
+      letter-spacing: -0.03em;
       padding-top: 23px;
     }
     .lead3 {
       font-size: 16px;
       line-height: 1.87;
+      letter-spacing: 0.02em;
       padding-top: 12px;
       text-align: center;
     }
@@ -461,6 +466,7 @@ footer {
       height: 45px;
       width: 100%;
       text-align: center;
+      padding-bottom: 12px;
     }
     .pc_about_img {
       display: none;
@@ -469,7 +475,6 @@ footer {
       display: block;
       width: 100%;
       margin: 0 auto;
-      padding-top: 12px;
     }
     .about_copy {
       padding-left: 20px;
@@ -484,7 +489,7 @@ footer {
     }
     .menu_title {
        height: 45px;
-       padding: 41px 0 0;
+       padding: 38px 0 17px;
     }
     .menu_container {
       flex-direction: column;
@@ -501,20 +506,20 @@ footer {
       display: block;
       width: 100%;
       border-top-right-radius: 41px;
-      padding-top: 17px;
     }
     .menu_contents {
       font-size: 40px;
-      top: 93%;
+      line-height: 0.55;
+      top: 97%;
     }
     .menu_text {
       font-size: 17px;
       line-height: 1.58;
-      padding-bottom: 56px;
+      padding: 41px 0 65px;
     }
     .gallery_title {
       height: 45px;
-      padding: 41px 0 17px;
+      padding: 15px 0 15px;
     }
     .pc_gallery_img {
       display: none;
@@ -557,6 +562,7 @@ footer {
     }
     iframe {
       height: 191px;
+      padding: 0;
     }
     .footer_wrap {
       display: block;
@@ -572,8 +578,11 @@ footer {
       font-size: 18px;
       line-height: 1.72;
     }
+    .address {
+      margin-bottom: 15px;
+    }
     .footer_outer {
-      padding: 20px 0 27px;
+      padding: 25px 0 27px;
     }
     .pagetop {
       width: 100px;
