@@ -589,8 +589,27 @@ footer {
     .slick-slide img {
       width: 100%;
     }
+    .slick-prev {
+      left: 10%;
+    }
+    .slick-next {
+      right: 10%;
+    }
+    .slick-prev:before {
+      width: 16px;
+      height: 16px;
+      border-top: 2px solid white;
+      border-left: 2px solid white;
+      transform: rotate(-45deg);
+  }
+  .slick-next:before {
+    width: 16px;
+    height: 16px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(45deg);
+  }
 }
-
 /* スライダー */
 .slick-dots {
   bottom: 20px;
@@ -628,4 +647,7 @@ footer {
   border-top: 5px solid white;
   border-right: 5px solid white;
   transform: rotate(45deg);
+}
+.lb-data .lb-number {
+  display: none !important;
 }
